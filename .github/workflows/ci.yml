@@ -4,13 +4,13 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - '**.sol'
-      - '**.yml'
+      - "**.sol"
+      - "**.yml"
   push:
     branches: [main]
     paths:
-      - '**.sol'
-      - '**.yml'
+      - "**.sol"
+      - "**.yml"
 jobs:
   tests:
     name: Forge Testing
@@ -18,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        profile: [regular,intense]
+        profile: [regular, intense]
 
     steps:
       - uses: actions/checkout@v4
@@ -57,4 +57,3 @@ jobs:
           check_filenames: true
           ignore_words_list: usera
           skip: ./.git,package-lock.json,ackee-blockchain-solady-report.pdf,EIP712Mock.sol
-

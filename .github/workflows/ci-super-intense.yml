@@ -7,10 +7,10 @@ jobs:
   tests:
     name: Forge Testing super intense
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
-        profile: [super-intense-0,super-intense-1]
+        profile: [super-intense-0, super-intense-1]
 
     steps:
       - uses: actions/checkout@v4
@@ -31,4 +31,3 @@ jobs:
           ( [ "${{ matrix.profile }}" = "super-intense-1" ] &&
             forge test --fuzz-runs 200000
           )
-
